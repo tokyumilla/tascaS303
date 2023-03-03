@@ -11,4 +11,9 @@ public class Decoration extends Product {
         this.name = name;
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Decoración{nombre: " + name + ", tipo: " + type + ", precio: "+ super.getPrice() + "}";
+    }
 }

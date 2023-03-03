@@ -3,12 +3,12 @@ package exercici1n1.entities;
 import java.io.Serializable;
 
 public abstract class Product implements Serializable {
-    private Double price;
+    private double price;
 
     public Product(double price) {
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 }
