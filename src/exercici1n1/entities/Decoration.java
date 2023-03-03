@@ -13,6 +13,11 @@ public class Decoration extends Product {
     }
 
     @Override
+    public double getPrice() {
+        return super.getPrice();
+    }
+
+    @Override
     public String toString() {
         return "Decoración{nombre: " + name + ", tipo: " + type + ", precio: "+ super.getPrice() + "}";
     }

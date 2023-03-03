@@ -11,6 +11,12 @@ public class Flower extends Product {
         this.name = name;
         this.colour = colour;
     }
+
+    @Override
+    public double getPrice() {
+        return super.getPrice();
+    }
+
     @Override
     public String toString() {
         return "Flor{nombre: " + name + ", color: " + colour + ", precio: "+ super.getPrice() + "}";

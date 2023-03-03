@@ -13,6 +13,11 @@ public class Tree extends Product {
 
     }
 
+
+    public double getPrice() {
+        return super.getPrice();
+    }
+
     @Override
     public String toString() {
         return "Árbol{nombre: " + name + ", altura: " + height + ", precio: "+ super.getPrice() + "}";
