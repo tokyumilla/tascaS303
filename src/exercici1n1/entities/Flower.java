@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Flower extends Product {
     private String name;
     private String colour;
+    private double price;
 
     public Flower(String name, String colour, double price) {
         super(price);

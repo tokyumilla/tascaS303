@@ -6,6 +6,7 @@ public abstract class Product implements Serializable {
     private double price;
 
     public Product(double price) {
+        this.price=price;
     }
 
     public double getPrice() {
