@@ -18,13 +18,14 @@ public class Main {
 
 
         do {
-            System.out.println("Introduzca una opción (0-5): ");
+            System.out.println("Introduzca una opción (0-8): ");
             System.out.println("0. Cerrar el programa");
             System.out.println("1. Crear una floristería nueva");
             System.out.println("2. Mostrar floristerías");
             System.out.println("3. Añadir producto");
             System.out.println("4. Listar stock");
             System.out.println("5. Retirar un producto");
+            System.out.println("6. Consultar el valor total de una floristería");
             option = sc.nextInt();
 
 
@@ -54,9 +55,18 @@ public class Main {
                 case 5:
                     System.out.println("¿De qué floristería quiere retirar el producto?");
                     FlowerShop flowerShop3 = findFlowerShop(flowerShops);
-                    if (flowerShop3!=null) {
-
+                    if (flowerShop3 != null) {
+                        deleteProduct(flowerShop3);
+                        writeFile(flowerShops);
                     }
+                case 6:
+                    System.out.println("¿De qué floristería quiere consultar el valor total?");
+                    FlowerShop flowerShop4 = findFlowerShop(flowerShops);
+                    if (flowerShop4 != null) {
+                        System.out.println("El valor total del stock de la floristería es "+
+                                flowerShop4.getStockValue() );
+                    }
+                    break;
                 case 0:
                     System.out.println("Cerrando el programa");
                     break;
@@ -189,17 +199,17 @@ public class Main {
         ArrayList<Product> stock = flowerShop.getStock();
         int index = 0;
         for (Product product : stock) {
-            System.out.println(index +". " + product.toString());
+            System.out.println(index + ". " + product.toString());
             index++;
         }
     }
 
     public static void deleteProduct(FlowerShop flowerShop) {
         ArrayList<Product> stock = flowerShop.getStock();
-        if (stock.size()==0) {
+        if (stock.size() == 0) {
             System.out.println("No hay productos en esta floristería");
         } else {
-            System.out.println("Escriba el número del producto que quiere retirar");
+
             showStock(flowerShop);
             flowerShop.getStock().remove(findProduct(flowerShop));
             System.out.println("Producto eliminado");
@@ -207,9 +217,17 @@ public class Main {
     }
 
     public static Product findProduct(FlowerShop flowerShop) {
-        Scanner sc = new Scanner (System.in);
-        int index = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int index = -1;
+        while (index < 0 || index > flowerShop.getStock().size()) {
+            System.out.println("Escriba el número del producto");
+            index = sc.nextInt();
+            if (index < 0 || index > flowerShop.getStock().size()) {
+                System.out.println("El número no es correcto");
+            }
+        }
         return flowerShop.getStock().get(index);
     }
+
 
 }
