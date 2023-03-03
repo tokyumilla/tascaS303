@@ -4,7 +4,6 @@
     <list default="true" id="9fb56733-762b-4b0f-85f2-a715c5ada50b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/FlowerShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/FlowerShop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,21 +68,29 @@
       <option name="project" value="LOCAL" />
       <updated>1677877260858</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Funciones de la 1 a la 4 ok">
+      <created>1677877904757</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677877904757</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creando funcionalidades del main" />
     <MESSAGE value="Agregando flores" />
     <MESSAGE value="Probar funciones 1-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Probar funciones 1-4" />
+    <MESSAGE value="Funciones de la 1 a la 4 ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funciones de la 1 a la 4 ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/exercici1n1/Main.java</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
