@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class FlowerShop implements Serializable {
     private String name;
-    ArrayList<Product> stock;
+    ArrayList<Product> stock = new ArrayList<>();
     private double stockValue;
 
     public void setStockValue(double stockValue) {

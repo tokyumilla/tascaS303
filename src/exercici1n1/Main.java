@@ -36,14 +36,17 @@ public class Main {
                     showFlowerShops(flowerShops);
                     break;
                 case 3:
+                    System.out.println("¿A qué floristería quiere añadir el producto?");
                     FlowerShop flowerShop1 = findFlowerShop(flowerShops);
                     if (flowerShop1 != null) {
                         addProduct(flowerShop1);
                     }
+                    writeFile(flowerShops);
                     break;
                 case 4:
+                    System.out.println("¿De qué floristería quiere consultar el stock?");
                     FlowerShop flowerShop2 = findFlowerShop(flowerShops);
-                    if (flowerShop2!= null) {
+                    if (flowerShop2 != null) {
                         showStock(flowerShop2);
                     }
                 case 0:
@@ -94,7 +97,7 @@ public class Main {
 
     public static FlowerShop findFlowerShop(ArrayList<FlowerShop> flowerShops) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("¿A qué floristería quiere añadir el producto?");
+
         String name = sc.nextLine();
         FlowerShop flowerShop = new FlowerShop(name);
         int index = flowerShops.indexOf(flowerShop);
@@ -156,7 +159,7 @@ public class Main {
         System.out.println("Introduzca el nombre de la decoración");
         String name = sc.nextLine().toLowerCase();
         String option;
-        String type=null;
+        String type = null;
         do {
             System.out.println("Introduzca el tipo de material: (M/P)");
             System.out.println("P. Plástico \n M. Madera");
@@ -174,7 +177,7 @@ public class Main {
         return new Decoration(name, type, price);
     }
 
-    public static void showStock (FlowerShop flowerShop) {
+    public static void showStock(FlowerShop flowerShop) {
         ArrayList<Product> stock = flowerShop.getStock();
         for (Product product : stock) {
             System.out.println(product.toString());
