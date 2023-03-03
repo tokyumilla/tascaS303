@@ -6,7 +6,6 @@ import exercici1n1.entities.FlowerShop;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +15,7 @@ public class Main {
         int option;
         Scanner sc = new Scanner(System.in);
         ArrayList<FlowerShop> flowerShops;
-        flowerShops= readFile();
+        flowerShops = readFile();
 
 
         do {
@@ -37,7 +36,10 @@ public class Main {
                     showFlowerShops(flowerShops);
                     break;
                 case 3:
-
+                    if (findFlowerShop(flowerShops) != null) {
+                    addProduct(findFlowerShop(flowerShops));
+                    }
+                    break;
                 case 0:
                     System.out.println("Cerrando el programa");
                     break;
@@ -62,17 +64,12 @@ public class Main {
         System.out.println("Introduzca el nombre de la floristería");
         Scanner sc1 = new Scanner(System.in);
         String name = sc1.nextLine();
-        boolean found = false;
-        for (FlowerShop fs : flowerShops) {
-            if (fs.getName().equals(name)) {
-                found = true;
-                break;
-            }
-        }
+        FlowerShop flowerShop = new FlowerShop(name);
+        boolean found = flowerShops.contains(flowerShop);
+
         if (found) {
             System.out.println("La floristería" + name + "ya existe");
         } else {
-            FlowerShop flowerShop = new FlowerShop(name);
             flowerShops.add(flowerShop);
             System.out.println("La floristería " + name + " ha sido creada.");
         }
@@ -89,7 +86,21 @@ public class Main {
         }
     }
 
-    public static void addProduct () {
+    public static FlowerShop findFlowerShop (ArrayList<FlowerShop> flowerShops) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿A qué floristería quiere añadir el producto?");
+        String name = sc.nextLine();
+        FlowerShop flowerShop = new FlowerShop(name);
+        int index = flowerShops.indexOf(flowerShop);
+        if (index !=-1) {
+            return flowerShops.get(index);
+        } else {
+            System.out.println("La floristería "+ name + " no existe.");
+            return null;
+        }
+
+    }
+    public static void addProduct(FlowerShop flowerShop) {
         int option;
         Scanner sc = new Scanner(System.in);
         System.out.println("¿Qué producto quiere añadir?(1-3)");
@@ -97,10 +108,11 @@ public class Main {
         option = sc.nextInt();
         switch (option) {
             case 1:
-
+                flowerShop.getStock().add(addFlower());
         }
     }
-    public static Flower addFlower () {
+
+    public static Flower addFlower() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el nombre de la flor");
         String name = sc.nextLine().toLowerCase();
@@ -108,7 +120,7 @@ public class Main {
         String colour = sc.nextLine().toLowerCase();
         System.out.println("Introduzca el precio de la flor");
         Double price = sc.nextDouble();
-        Flower flower = new Flower (name, colour,price);
+        Flower flower = new Flower(name, colour, price);
         return flower;
     }
 
