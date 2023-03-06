@@ -6,18 +6,14 @@ import java.util.ArrayList;
 
 public class Ticket {
     ArrayList<Product> purchase = new ArrayList<>();
-    private double totalCost = calculateTotal(purchase) ;
+
 
     public ArrayList<Product> getPurchase() {
         return purchase;
     }
 
-    public double getTotalCost() {
-        return totalCost;
-    }
-
-    public double calculateTotal (ArrayList<Product> purchase) {
-        int total = 0;
+    public double calculateTotal () {
+        double total = 0;
         for (Product product : purchase) {
             total += product.getPrice();
         }
@@ -30,6 +26,6 @@ public class Ticket {
 
             System.out.println(product.getName() + "precio:" + product.getPrice() + "€");
         }
-        System.out.println("El total de su compra es: " + totalCost + "€");
+        System.out.println("El total de su compra es: " + calculateTotal() + "€");
     }
 }

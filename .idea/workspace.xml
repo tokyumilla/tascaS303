@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fb56733-762b-4b0f-85f2-a715c5ada50b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/Decoration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/Decoration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/Flower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/Flower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/Tree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/functionalities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/functionalities/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678127775642</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="creando opción 7">
+      <created>1678128162556</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678128162556</updated>
+    </task>
+    <task id="LOCAL-00010" summary="opción 7 creada, a testar">
+      <created>1678128552747</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678128552747</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,20 +131,26 @@
     <MESSAGE value="función 6" />
     <MESSAGE value="rescatado" />
     <MESSAGE value="creando opción 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="creando opción 7" />
+    <MESSAGE value="opción 7 creada, a testar" />
+    <option name="LAST_COMMIT_MESSAGE" value="opción 7 creada, a testar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/exercici1n1/Main.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/exercici1n1/entities/Flower.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/exercici1n1/entities/Flower.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/exercici1n1/Main.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/exercici1n1/functionalities/Ticket.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

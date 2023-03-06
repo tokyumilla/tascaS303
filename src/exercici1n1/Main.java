@@ -248,7 +248,7 @@ public class Main {
             buyProduct(flowerShop, ticket);
             System.out.println("¿Quiere seguir comprando? (S/N)");
             yesNo = sc.nextLine().toUpperCase();
-            while (!yesNo.equals("S") || !yesNo.equals("N")) {
+            while (!yesNo.equals("S") && !yesNo.equals("N")) {
                 System.out.println("Comando incorrecto, introduzca S o N");
                 yesNo = sc.nextLine().toUpperCase();
             }
@@ -260,6 +260,7 @@ public class Main {
         if (stock.size() == 0) {
             System.out.println("No hay productos en esta floristería");
         } else {
+            System.out.println("Estos son los productos disponibles");
             showStock(flowerShop);
             Product product = findProduct(flowerShop);
             ticket.getPurchase().add(product);

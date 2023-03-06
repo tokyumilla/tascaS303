@@ -12,6 +12,7 @@ public abstract class Product implements Serializable {
     }
 
     public Product(String name, double price) {
+        this.name=name;
         this.price=price;
     }
 
