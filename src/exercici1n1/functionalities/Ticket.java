@@ -23,4 +23,10 @@ public class Ticket {
         }
         return total;
     }
+
+    public void printTicket (){
+        for (Product product : purchase) {
+            product.get
+        }
+    }
 }

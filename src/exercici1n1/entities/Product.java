@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 public abstract class Product implements Serializable {
     private double price;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
 
     public Product(double price) {
         this.price=price;

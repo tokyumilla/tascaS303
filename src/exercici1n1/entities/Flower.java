@@ -9,7 +9,7 @@ public class Flower extends Product {
 
     public Flower(String name, String colour, double price) {
         super(price);
-        this.name = name;
+        super(name);
         this.colour = colour;
     }
 
@@ -20,6 +20,6 @@ public class Flower extends Product {
 
     @Override
     public String toString() {
-        return "Flor{nombre: " + name + ", color: " + colour + ", precio: "+ super.getPrice() + "}";
+        return "Flor{nombre: " + super.getName() + ", color: " + colour + ", precio: "+ super.getPrice() + "}";
     }
 }
