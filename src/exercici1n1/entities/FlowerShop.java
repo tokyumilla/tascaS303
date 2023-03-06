@@ -62,8 +62,8 @@ public class FlowerShop implements Serializable {
     }
 
     public void showSales (){
+        int i = 1;
         for (Ticket ticket: tickets) {
-            int i = 1;
             System.out.println("Venta nº:" + i);
             System.out.println(ticket.listTicket());
             i++;

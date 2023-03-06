@@ -29,6 +29,7 @@ public class Main {
             System.out.println("6. Consultar el valor total de una floristería");
             System.out.println("7. Hacer una compra");
             System.out.println("8. Mostrar listado de compras");
+            System.out.println("9. Mostrar total de ventas");
             option = sc.nextInt();
 
 

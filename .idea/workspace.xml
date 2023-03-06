@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exercici1n1/entities/FlowerShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/entities/FlowerShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercici1n1/functionalities/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/functionalities/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678129456972</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="opción 8 y 9 por testar">
+      <created>1678140545910</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678140545910</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -140,7 +146,8 @@
     <MESSAGE value="creando opción 7" />
     <MESSAGE value="opción 7 creada, a testar" />
     <MESSAGE value="opción 7 testada" />
-    <option name="LAST_COMMIT_MESSAGE" value="opción 7 testada" />
+    <MESSAGE value="opción 8 y 9 por testar" />
+    <option name="LAST_COMMIT_MESSAGE" value="opción 8 y 9 por testar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -152,7 +159,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/exercici1n1/Main.java</url>
-          <line>76</line>
+          <line>77</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
