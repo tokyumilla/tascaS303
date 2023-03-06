@@ -28,4 +28,13 @@ public class Ticket {
         }
         System.out.println("El total de su compra es: " + calculateTotal() + "€");
     }
+
+    public String listTicket (){
+        String listTicket = null;
+        for (Product product : purchase) {
+            listTicket += (product.getName() + ", precio: " + product.getPrice() + "\n");
+        }
+        listTicket+= "Total: " + calculateTotal() + "€";
+        return listTicket;
+    }
 }

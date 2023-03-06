@@ -28,6 +28,7 @@ public class Main {
             System.out.println("5. Retirar un producto");
             System.out.println("6. Consultar el valor total de una floristería");
             System.out.println("7. Hacer una compra");
+            System.out.println("8. Mostrar listado de compras");
             option = sc.nextInt();
 
 
@@ -75,10 +76,27 @@ public class Main {
                     FlowerShop flowerShop5 = findFlowerShop(flowerShops);
                     if (flowerShop5 != null) {
                         Ticket ticket = new Ticket();
-                        buyVoid(flowerShop5,ticket);
+                        buyVoid(flowerShop5, ticket);
                         ticket.printTicket();
+                        flowerShop5.addTickets(ticket);
+                        writeFile(flowerShops);
                     }
                     break;
+                case 8:
+                    System.out.println("¿De qué floristería quiere ver el histórico de compras?");
+                    FlowerShop flowerShop6 = findFlowerShop(flowerShops);
+                    if (flowerShop6 != null) {
+                        flowerShop6.showSales();
+                    }
+                    break;
+                case 9:
+                    System.out.println("¿De qué floristería quieres saber el total de ventas?");
+                    FlowerShop flowerShop7 = findFlowerShop(flowerShops);
+                    if (flowerShop7 != null) {
+                        flowerShop7.showTotal();
+                    }
+                    break;
+
                 case 0:
                     System.out.println("Cerrando el programa");
                     break;
@@ -268,7 +286,6 @@ public class Main {
             System.out.println("Producto comprado");
         }
     }
-
 
 
 }
