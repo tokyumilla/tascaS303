@@ -67,6 +67,14 @@ public class Main {
                                 flowerShop4.getStockValue() );
                     }
                     break;
+                case 7:
+                    System.out.println("¿De qué floristería quiere consultar el valor total?");
+                    FlowerShop flowerShop4 = findFlowerShop(flowerShops);
+                    if (flowerShop4 != null) {
+                        System.out.println("El valor total del stock de la floristería es "+
+                                flowerShop4.getStockValue() );
+                    }
+                    break;
                 case 0:
                     System.out.println("Cerrando el programa");
                     break;
