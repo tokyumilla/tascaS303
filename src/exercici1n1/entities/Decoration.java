@@ -7,9 +7,9 @@ public class Decoration extends Product {
     private String type;
 
     public Decoration(String name, String type, double price) {
-        super(price);
-        super(name);
+        super(name, price);
         this.type = type;
+
     }
 
     @Override

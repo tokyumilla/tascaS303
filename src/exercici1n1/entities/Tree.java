@@ -1,14 +1,11 @@
 package exercici1n1.entities;
 
-import java.io.Serializable;
-
 public class Tree extends Product {
 
     private double height;
 
     public Tree(String name, double height, double price) {
-        super(price);
-        super(name);
+        super(name, price);
         this.height= height;
 
     }

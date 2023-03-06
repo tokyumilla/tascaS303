@@ -25,8 +25,11 @@ public class Ticket {
     }
 
     public void printTicket (){
+        System.out.println("Esta es su compra:");
         for (Product product : purchase) {
-            product.get
+
+            System.out.println(product.getName() + "precio:" + product.getPrice() + "€");
         }
+        System.out.println("El total de su compra es: " + totalCost + "€");
     }
 }

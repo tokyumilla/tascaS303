@@ -74,7 +74,9 @@ public class Main {
                     System.out.println("¿En qué floristería quiere comprar?");
                     FlowerShop flowerShop5 = findFlowerShop(flowerShops);
                     if (flowerShop5 != null) {
-
+                        Ticket ticket = new Ticket();
+                        buyVoid(flowerShop5,ticket);
+                        ticket.printTicket();
                     }
                     break;
                 case 0:

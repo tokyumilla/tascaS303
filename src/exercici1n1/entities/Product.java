@@ -6,11 +6,12 @@ public abstract class Product implements Serializable {
     private double price;
     private String name;
 
+
     public String getName() {
         return name;
     }
 
-    public Product(double price) {
+    public Product(String name, double price) {
         this.price=price;
     }
 
