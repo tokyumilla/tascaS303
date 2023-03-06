@@ -2,6 +2,7 @@ package exercici1n1;
 
 import exercici1n1.connection.Connection;
 import exercici1n1.entities.*;
+import exercici1n1.functionalities.Ticket;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class Main {
             System.out.println("4. Listar stock");
             System.out.println("5. Retirar un producto");
             System.out.println("6. Consultar el valor total de una floristería");
+            System.out.println("7. Hacer una compra");
             option = sc.nextInt();
 
 
@@ -59,20 +61,20 @@ public class Main {
                         deleteProduct(flowerShop3);
                         writeFile(flowerShops);
                     }
+                    break;
                 case 6:
                     System.out.println("¿De qué floristería quiere consultar el valor total?");
                     FlowerShop flowerShop4 = findFlowerShop(flowerShops);
                     if (flowerShop4 != null) {
-                        System.out.println("El valor total del stock de la floristería es "+
-                                flowerShop4.getStockValue() );
+                        System.out.println("El valor total del stock de la floristería es " +
+                                flowerShop4.getStockValue());
                     }
                     break;
                 case 7:
-                    System.out.println("¿De qué floristería quiere consultar el valor total?");
-                    FlowerShop flowerShop4 = findFlowerShop(flowerShops);
-                    if (flowerShop4 != null) {
-                        System.out.println("El valor total del stock de la floristería es "+
-                                flowerShop4.getStockValue() );
+                    System.out.println("¿En qué floristería quiere comprar?");
+                    FlowerShop flowerShop5 = findFlowerShop(flowerShops);
+                    if (flowerShop5 != null) {
+
                     }
                     break;
                 case 0:
@@ -217,7 +219,7 @@ public class Main {
         if (stock.size() == 0) {
             System.out.println("No hay productos en esta floristería");
         } else {
-
+            System.out.println("Estos son los productos disponibles:");
             showStock(flowerShop);
             flowerShop.getStock().remove(findProduct(flowerShop));
             System.out.println("Producto eliminado");
@@ -228,13 +230,40 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int index = -1;
         while (index < 0 || index > flowerShop.getStock().size()) {
-            System.out.println("Escriba el número del producto");
+            System.out.println("Escriba el número del producto deseado");
             index = sc.nextInt();
             if (index < 0 || index > flowerShop.getStock().size()) {
                 System.out.println("El número no es correcto");
             }
         }
         return flowerShop.getStock().get(index);
+    }
+
+    public static void buyVoid(FlowerShop flowerShop, Ticket ticket) {
+        Scanner sc = new Scanner(System.in);
+        String yesNo = null;
+        do {
+            buyProduct(flowerShop, ticket);
+            System.out.println("¿Quiere seguir comprando? (S/N)");
+            yesNo = sc.nextLine().toUpperCase();
+            while (!yesNo.equals("S") || !yesNo.equals("N")) {
+                System.out.println("Comando incorrecto, introduzca S o N");
+                yesNo = sc.nextLine().toUpperCase();
+            }
+        } while (yesNo.equals("S"));
+    }
+
+    public static void buyProduct(FlowerShop flowerShop, Ticket ticket) {
+        ArrayList<Product> stock = flowerShop.getStock();
+        if (stock.size() == 0) {
+            System.out.println("No hay productos en esta floristería");
+        } else {
+            showStock(flowerShop);
+            Product product = findProduct(flowerShop);
+            ticket.getPurchase().add(product);
+            flowerShop.getStock().remove(product);
+            System.out.println("Producto comprado");
+        }
     }
 
 
