@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fb56733-762b-4b0f-85f2-a715c5ada50b" name="Changes" comment="opción 8 y 9 por testar">
-      <change afterPath="$PROJECT_DIR$/src/exercici1n1/functionalities/Tool.java" afterDir="false" />
+    <list default="true" id="9fb56733-762b-4b0f-85f2-a715c5ada50b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercici1n1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercici1n1/functionalities/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercici1n1/functionalities/Tool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678140545910</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="creación de clase Tool">
+      <created>1678986924238</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678986924238</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,7 +154,8 @@
     <MESSAGE value="opción 7 creada, a testar" />
     <MESSAGE value="opción 7 testada" />
     <MESSAGE value="opción 8 y 9 por testar" />
-    <option name="LAST_COMMIT_MESSAGE" value="opción 8 y 9 por testar" />
+    <MESSAGE value="creación de clase Tool" />
+    <option name="LAST_COMMIT_MESSAGE" value="creación de clase Tool" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -158,7 +167,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/exercici1n1/Main.java</url>
-          <line>77</line>
+          <line>78</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
